@@ -54,11 +54,6 @@ call s:InitVariable('g:indent_guides_enable_on_vim_startup', 0 )
 call s:InitVariable('g:indent_guides_debug',                 0 )
 call s:InitVariable('g:indent_guides_space_guides',          1 )
 
-" Default mapping
-if !hasmapto('<Plug>IndentGuidesToggle', 'n') && maparg('<Leader>ig', 'n') == ''
-  nmap <silent><unique> <Leader>ig <Plug>IndentGuidesToggle
-endif
-
 " Plug mappings
 nnoremap <unique><script> <Plug>IndentGuidesToggle  :IndentGuidesToggle<CR>
 nnoremap <unique><script> <Plug>IndentGuidesEnable  :IndentGuidesEnable<CR>
